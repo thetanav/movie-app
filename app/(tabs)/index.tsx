@@ -77,11 +77,12 @@ const Index = () => {
                   data={trendingMovies}
                   contentContainerStyle={{
                     gap: 26,
+                    paddingRight: 20,
                   }}
                   renderItem={({ item, index }) => (
                     <TrendingCard movie={item} index={index} />
                   )}
-                  keyExtractor={(item) => item.movie_id.toString()}
+                  keyExtractor={(item) => item.movie_id.toString() + "_trnd"}
                   ItemSeparatorComponent={() => <View className="w-4" />}
                 />
               </View>

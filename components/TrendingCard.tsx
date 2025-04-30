@@ -13,13 +13,13 @@ const TrendingCard = ({
       <TouchableOpacity className="w-32 relative pl-5">
         <Image
           source={{ uri: poster_url }}
-          className="w-32 h-48 rounded-lg"
+          className="w-32 h-48 rounded-xl"
           resizeMode="cover"
         />
-        <View className="absolute bottom-9 -left-3.5 px-2 py-1 rounded-full">
+        <View className="absolute -bottom-2 -left-2">
           <MaskedView
             maskElement={
-              <Text className="font-bold text-white text-6xl">{index + 1}</Text>
+              <Text className="font-bold text-white text-7xl">{index + 1}</Text>
             }>
             <Image
               source={images.rankingGradient}
@@ -28,7 +28,6 @@ const TrendingCard = ({
             />
           </MaskedView>
         </View>
-        hh
       </TouchableOpacity>
     </Link>
   );
