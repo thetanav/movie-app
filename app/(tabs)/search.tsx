@@ -10,7 +10,7 @@ import {
 import React, { useEffect, useState } from "react";
 import useFetch from "@/services/useFetch";
 import { fetchMovies } from "@/services/api";
-// import { getTrendingMovies } from "@/services/appwrite";
+import { updateSearchCount } from "@/services/appwrite";
 
 import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
@@ -32,12 +32,19 @@ const Search = () => {
     loading: moviesLoading,
     error: moviesError,
     refetch,
+    reset,
   } = useFetch(() => fetchMovies({ query: query }));
 
   useEffect(() => {
     const timeoutId = setTimeout(async () => {
       if (query) {
         await refetch();
+
+        if (movies?.length! > 0 && movies?.[0]) {
+          await updateSearchCount(query, movies[0]);
+        }
+      } else {
+        reset();
       }
     }, 500);
     return () => clearTimeout(timeoutId);
