@@ -5,7 +5,7 @@ import { icons } from "@/constants/icons";
 const SearchBar = ({ onPress }: { onPress: () => void }) => {
   return (
     <TouchableOpacity
-      className="flex-row items-center rounded-full px-5 w-full"
+      className="flex-row items-center rounded-full px-5 w-full mt-5"
       onPress={onPress}
       style={{
         backgroundColor: "#0F0D23",

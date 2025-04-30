@@ -57,7 +57,7 @@ const Search = () => {
         contentContainerStyle={{ minHeight: "100%", paddingBottom: 10 }}>
         <Image source={icons.logo} className="w-12 h-10 mt-20 mb-5 mx-auto" />
 
-        <View className="flex-row items-center rounded-full px-5 py-[5px] bg-dark-200">
+        <View className="flex-row items-center rounded-full px-5 py-[5px] mt-5 bg-dark-200">
           <Image
             source={icons.search}
             className="size-5"
@@ -82,7 +82,7 @@ const Search = () => {
         ) : moviesError ? (
           <Text>Error: {moviesError?.message}</Text>
         ) : (
-          <View className="flex-1 mt-5">
+          <View className="flex-1">
             <Text className="text-lg text-white font-bold mt-5 mb-3">
               Search results for
               <Text className="text-purple-300"> {query}</Text>
