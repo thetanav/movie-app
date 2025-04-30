@@ -4,7 +4,7 @@ import { icons } from "@/constants/icons";
 
 const SearchBar = ({ onPress }: { onPress: () => void }) => {
   return (
-    <View className="flex-row items-center bg-dark-200 rounded-full px-5 py-4 w-full h-fit border border-white">
+    <View className="flex-row items-center bg-dark-200 rounded-full px-5 w-full">
       <Image
         source={icons.search}
         className="size-5"
