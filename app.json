@@ -14,8 +14,9 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/logo.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#030014"
+      },
+      "package": "com.tanav.movieapp"
     },
     "web": {
       "bundler": "metro",
@@ -35,12 +36,20 @@
           "image": "./assets/images/logo.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#030014"
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "f11360c9-0d92-4d04-880e-1c6896b8c6e3"
+      }
     }
   }
 }
