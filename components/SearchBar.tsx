@@ -1,25 +1,24 @@
-import { View, Text, Image, TextInput } from "react-native";
+import { Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { icons } from "@/constants/icons";
 
 const SearchBar = ({ onPress }: { onPress: () => void }) => {
   return (
-    <View className="flex-row items-center bg-dark-200 rounded-full px-5 w-full">
+    <TouchableOpacity
+      className="flex-row items-center rounded-full px-5 w-full"
+      onPress={onPress}
+      style={{
+        backgroundColor: "#0F0D23",
+        paddingVertical: 15,
+      }}>
       <Image
         source={icons.search}
         className="size-5"
         resizeMode="contain"
         tintColor="#ab8bff"
       />
-      <TextInput
-        onPress={onPress}
-        placeholder="Search for a movie"
-        onChangeText={() => {}}
-        value=""
-        placeholderTextColor="#a8b5db"
-        className="flex-1 ml-2 text-white"
-      />
-    </View>
+      <Text className="flex-1 ml-2 text-[#a8b5db]">Search for a movie</Text>
+    </TouchableOpacity>
   );
 };
 
